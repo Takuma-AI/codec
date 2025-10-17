@@ -8,7 +8,6 @@
         :root {
             --ink-black: #fafaf8;
             --bg-dark: #0a0a0a;
-            --strand-color: rgba(150, 100, 200, 0.4);
         }
 
         * {
@@ -161,89 +160,25 @@
             opacity: 0.5;
         }
 
-        /* Organic Strand Background */
-        .strand-container {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            transform: translateY(-50%);
-            overflow: visible;
-            z-index: 1;
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .strand {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            animation: flow 8s ease-in-out infinite;
-        }
-
-        .strand svg {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 0 3px var(--strand-color))
-                    drop-shadow(0 0 6px var(--strand-color))
-                    drop-shadow(0 0 9px rgba(150, 100, 200, 0.2));
-        }
-
-        .strand path {
-            fill: none;
-            stroke: var(--strand-color);
-            stroke-width: 0.5;
-            stroke-linecap: round;
-        }
-
-        .strand:nth-child(1) {
-            top: 25%;
-            animation-delay: 0s;
-            animation-duration: 9s;
-        }
-
-        .strand:nth-child(2) {
-            top: 40%;
-            animation-delay: 1.5s;
-            animation-duration: 7s;
-        }
-
-        .strand:nth-child(3) {
-            top: 55%;
-            animation-delay: 3s;
-            animation-duration: 10s;
-        }
-
-        .strand:nth-child(4) {
-            top: 70%;
-            animation-delay: 4.5s;
-            animation-duration: 8s;
-        }
-
-        @keyframes flow {
-            0%, 100% {
-                transform: translateX(-20%) scaleX(0.95);
-                opacity: 0.4;
-            }
-            50% {
-                transform: translateX(20%) scaleX(1.05);
-                opacity: 0.8;
-            }
-        }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
-                font-size: 1.75rem;
+                font-size: 2.75rem;
+                line-height: 1.3;
             }
 
             .brand {
-                font-size: 0.875rem;
+                font-size: 1.125rem;
+                margin-bottom: 80px;
+            }
+
+            .status {
+                font-size: 1rem;
             }
 
             .content {
-                padding: 20px;
+                padding: 32px 24px;
             }
 
             .takuma-nav {
@@ -267,74 +202,6 @@
             <a href="https://kane.takuma.ai" class="takuma-nav__link">KANE</a>
         </div>
     </nav>
-
-    <!-- Organic Strand Background -->
-    <div class="strand-container">
-        <div class="strand">
-            <svg viewBox="0 0 100 10" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="strand-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:rgba(150, 100, 200, 0);stop-opacity:0" />
-                        <stop offset="10%" style="stop-color:rgba(150, 100, 200, 0.1);stop-opacity:0.1" />
-                        <stop offset="25%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.3" />
-                        <stop offset="50%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.3" />
-                        <stop offset="75%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.3" />
-                        <stop offset="90%" style="stop-color:rgba(150, 100, 200, 0.1);stop-opacity:0.1" />
-                        <stop offset="100%" style="stop-color:rgba(150, 100, 200, 0);stop-opacity:0" />
-                    </linearGradient>
-                </defs>
-                <path d="M 5,5 Q 25,3 50,5 T 95,5" stroke="url(#strand-gradient-1)"/>
-            </svg>
-        </div>
-        <div class="strand">
-            <svg viewBox="0 0 100 10" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="strand-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:rgba(150, 100, 200, 0);stop-opacity:0" />
-                        <stop offset="10%" style="stop-color:rgba(150, 100, 200, 0.1);stop-opacity:0.1" />
-                        <stop offset="25%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.5" />
-                        <stop offset="50%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.5" />
-                        <stop offset="75%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.5" />
-                        <stop offset="90%" style="stop-color:rgba(150, 100, 200, 0.1);stop-opacity:0.1" />
-                        <stop offset="100%" style="stop-color:rgba(150, 100, 200, 0);stop-opacity:0" />
-                    </linearGradient>
-                </defs>
-                <path d="M 5,5 Q 25,7 50,5 T 95,5" stroke="url(#strand-gradient-2)"/>
-            </svg>
-        </div>
-        <div class="strand">
-            <svg viewBox="0 0 100 10" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="strand-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:rgba(150, 100, 200, 0);stop-opacity:0" />
-                        <stop offset="10%" style="stop-color:rgba(150, 100, 200, 0.1);stop-opacity:0.1" />
-                        <stop offset="25%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.6" />
-                        <stop offset="50%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.6" />
-                        <stop offset="75%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.6" />
-                        <stop offset="90%" style="stop-color:rgba(150, 100, 200, 0.1);stop-opacity:0.1" />
-                        <stop offset="100%" style="stop-color:rgba(150, 100, 200, 0);stop-opacity:0" />
-                    </linearGradient>
-                </defs>
-                <path d="M 5,5 Q 25,2 50,5 T 95,5" stroke="url(#strand-gradient-3)"/>
-            </svg>
-        </div>
-        <div class="strand">
-            <svg viewBox="0 0 100 10" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="strand-gradient-4" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:rgba(150, 100, 200, 0);stop-opacity:0" />
-                        <stop offset="10%" style="stop-color:rgba(150, 100, 200, 0.1);stop-opacity:0.1" />
-                        <stop offset="25%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.4" />
-                        <stop offset="50%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.4" />
-                        <stop offset="75%" style="stop-color:rgba(150, 100, 200, 0.4);stop-opacity:0.4" />
-                        <stop offset="90%" style="stop-color:rgba(150, 100, 200, 0.1);stop-opacity:0.1" />
-                        <stop offset="100%" style="stop-color:rgba(150, 100, 200, 0);stop-opacity:0" />
-                    </linearGradient>
-                </defs>
-                <path d="M 5,5 Q 25,8 50,5 T 95,5" stroke="url(#strand-gradient-4)"/>
-            </svg>
-        </div>
-    </div>
 
     <!-- Main Content -->
     <div class="content">
