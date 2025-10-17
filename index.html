@@ -206,7 +206,7 @@
         <div class="takuma-nav__links">
             <a href="https://takuma.ai" class="takuma-nav__link">BESPOKE</a>
             <a href="https://hashi.takuma.ai" class="takuma-nav__link">HASHI</a>
-            <a href="https://kane.takuma.ai" class="takuma-nav__link">KANE</a>
+            <!-- <a href="https://kane.takuma.ai" class="takuma-nav__link">KANE</a> -->
         </div>
     </nav>
 
@@ -260,19 +260,6 @@
                     document.removeEventListener('click', handleClickOutside);
                 }
             }
-
-            // Prevent hover events from interfering when manually expanded
-            takumaNav.addEventListener('mouseenter', function() {
-                if (!clickExpanded) {
-                    this.classList.add('expanded');
-                }
-            });
-
-            takumaNav.addEventListener('mouseleave', function() {
-                if (!clickExpanded) {
-                    this.classList.remove('expanded');
-                }
-            });
         }
     </script>
 </body>
