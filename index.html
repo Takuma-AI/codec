@@ -167,6 +167,43 @@
             opacity: 0.5;
         }
 
+        /* Construction Tape X */
+        .construction-tape {
+            position: fixed;
+            left: 0;
+            width: 100vw;
+            height: 30px;
+            top: 50%;
+            margin-top: 120px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .tape {
+            position: absolute;
+            width: 100%;
+            height: 14px;
+            left: 0;
+            top: 50%;
+            background: repeating-linear-gradient(
+                45deg,
+                #000000,
+                #000000 15px,
+                #FFD700 15px,
+                #FFD700 30px
+            );
+            transform-origin: center;
+            opacity: 0.85;
+        }
+
+        .tape--left {
+            transform: translateY(-50%) rotate(-8deg);
+        }
+
+        .tape--right {
+            transform: translateY(-50%) rotate(8deg);
+        }
+
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -193,6 +230,10 @@
                 left: 16px;
                 font-size: 0.75rem;
             }
+
+            .construction-tape {
+                margin-top: 200px;
+            }
         }
     </style>
 </head>
@@ -214,7 +255,12 @@
     <div class="content">
         <div class="brand">CODEC</div>
         <div class="hero">Async voice messages that flow like the best conversations.</div>
-        <div class="status">Under construction.</div>
+    </div>
+
+    <!-- Construction Tape X -->
+    <div class="construction-tape">
+        <div class="tape tape--left"></div>
+        <div class="tape tape--right"></div>
     </div>
 
     <script>
